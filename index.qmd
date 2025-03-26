@@ -1,5 +1,5 @@
 ---
-title: My Paper
+title: Project Proposals
 authors:
   - name: Caitlin Rasbid
     affiliation: Colorado State University
