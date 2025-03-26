@@ -10,7 +10,77 @@ authors:
     roles: writing
     corresponding: false
 bibliography: references.bib
+csl: apa-5th-edition.csl
 ---
 
-## Section
-This is a simple placeholder for the manuscript's main document [@knuth84].
+# Proposal 1 - Caitlin
+
+## Title: Comparing Two Superfund Sites’ Pollutants by Demographic Data
+
+## Justification:
+
+Other studies have been conducted that have found negative correlations between a Superfund’s proximity to a minority racial group and the probability of the Superfund being cleaned up (@topaz2023superfund). We reason from this that there may be greater pollution levels at Superfund sites adjacent to communities composed of primarily ethnic minorities. Additionally, the presence of Superfund sites has been associated with a decrease in life expectancy (@kiaghadi2021presence), making it especially important to discern if pollution levels are disproportionately impacting certain groups more than others. This proposed data analysis would be beneficial to identify which communities are especially polluted and if there is anything being done to address the source of pollution, with suggestions to improve current cleanup practices.
+
+## Research objective/question/hypothesis:
+
+Specifically we aim to answer if there is a correlation between pollution levels around Superfund sites and the racial demographic of the surrounding community. Our hypothesis is that Superfund sites located in/around predominantly ethnic-minority communities will be exposed to greater levels of pollution than White communities when controlling for time since initial designation of Superfund status. We plan to model this association spatially with two maps: one showing the total pollution levels at Superfund sites with colors indicating racial makeup and size indicating concentration of pollution. The second map will be the same except it will show the rate of change in pollution levels based on demographics, to factor in cleanup efforts.
+
+## Proposed Methods:
+
+The datasets we will be drawing from are a dataset on pollution levels at Superfund sites, provided by the EPA, and a dataset from the U.S. census that documents demographics and location. This proposal is reliant on spatial data, and as such both of our data must include latitude and longitude to properly merge these datasets and assess correlations. We will also be analyzing if Superfunds in close proximity to minority communities are designated by the EPA as being on the “National Priority List,” which signals a site has plans for or is currently undergoing cleanup. Another key variable we could analyze is the time a site has been included on the Superfund list, to analyze cleanup efforts over time and the change in pollution levels and allow us to compare Superfund sites on a standardized time scale. We have several options for statistical analysis. We will likely start with an ANOVA test of different racial groups and pollution levels and then a multiple linear regression to allow control for other variables such as income and population density. We could then geographically weight our data so that we could model it as a map.
+
+## Expected Outcomes: 
+The results of other studies are consistent with a racial element in the cleanup of Superfund sites. This suggests that remaining pollutant levels in these communities would likely be higher than Superfunds adjacent to White communities. We also expect raised pollution levels in communities that are predominantly low-income regardless of race, though realistically, we may not be able to factor socioeconomic status into our analysis due to the limited scope demanded by the timeframe of this project. These results could prove highly significant in directing future cleanups of Superfund sites to identify underserved areas facing racial bias.
+
+# Proposal 2 - Caitlin
+
+## Title: Fire Resilience by Tree Species' Morphology
+
+## Justification: 
+It has been identified in numerous other studies the link between tree morphology and fire resiliency. Several different morphological adaptations can be advantageous in increasing fire resiliency, especially when several morphologies are present in a species. For example, small savanna eucalypt trees have varying degrees of fire resiliency based on stem diameter, height, and bark thickness, with bark thickness being identified as the trait with the greatest predictive ability on fire resiliency, and a greater bark thickness aiding in the effectiveness of other fire resistant traits (@lawes2011small). Past research into fire resistant traits has also revealed how trees with high fire resiliency demonstrated different combinations of traits indicating different “strategies” to respond to fire. One study identified that “many plant traits and vital rates related to fire differed between Pinus ponderosa and Pseudotsuga menziesii, with trade-offs between investment in traits that promote individual defence to fire and those that promote recolonization of disturbed sites” (@rodman2021trait). The findings from these studies and more indicate the possibility for further scientific inquiry into how the occurrence of specific traits factor into tree resiliency, and which traits have the greatest impact on fire resiliency overall.
+
+## Research objective/question/hypothesis: 
+Our research objective is to analyze how fire resiliency varies by tree type, and what adaptations contribute most significantly to higher fire resiliency? We can begin by grouping the datasets by tree type and creating a model that compares species tree mortality based on a number of predictors. We will also factor in elements such as fire incidence in natural habitat. Based on other research into tree morphology, we believe that bark thickness will have the greatest predictive capacity of fire resilience. 
+
+## Proposed Methods:
+The datasets we will be drawing from are The Fire and Tree Mortality Database (@Cansler_2020) and the Flammability Plant Traits Database (@muller2019flamits). The first database provided by the U.S. Forest service will serve as an indication of the damage done by fire to 142 different species of trees. Key variables from this dataset will be individual trees, size, fire injury, and post-fire survival. Indication of the presence of bark beetles could also be interesting to include, but not necessary to our stated goal. The second dataset provided by Dryad Digital Repository provides a comprehensive list of variables factoring into plant flammability. Some of these variables important to our analysis include leaf morphology, bark thickness, resin content, canopy structure, and wood density. We can assess the correlation between predictors on fire resiliency using multiple ANOVAs and create generalized linear models to predict the likelihood or rate of fire mortality given specific traits of the trees. We would use tree species as a factor and traits as predictors.
+
+
+## Expected Outcomes: 
+We expect that tree species located in areas of high fire incidence will have the greatest fire resiliency, supported by the fact that fires are common in their natural habitats and may even be required for a species to thrive, such as the lodgepole pine. We don't have an indication of specific tree species that will fare the best, but we predict that species with thicker bark and higher resin content will fare better than other species and that these two variables will play the greatest role in influencing a species’ fire mortality rate.
+
+
+# Proposal 3 - Caleb
+
+## Title: Comparing Air Pollution Levels in Denver County by Census Tract
+
+## Justification: 
+Air pollution in metropolitan areas does not impact racial groups uniformly, since neighborhoods often have differing compositions of non-white residents depending on their proximity to industrial zones or highways. Previous studies suggest that non-white communities may experience higher than average exposures to air pollution than white communities, which has been perpetuated by historical practices of redlining and covert segregation. (@gwynn2001pollution) Air pollution exposure has been linked to various adverse health impacts, especially for vulnerable groups such as children and the elderly. Long-term exposure to higher than average levels of air pollutants can contribute to respiratory conditions such as asthma, cardiovascular disease, and pulmonary insufficiency. (@ofremu2024health) Unequal exposure to high levels of air pollution based on racial demographics can have widespread impacts on the overall health of minority communities, and has the potential to perpetuate environmental discrimination. Ensuring that all communities have access to clean air and maintain good health is a primary objective of UN Sustainable Development Goals, which further cements the importance of this subject. 
+
+
+## Research objective/question/hypothesis: 
+In our project, we aim to explore whether there is environmental discrimination present in Denver, CO based on quantities of harmful pollutants in the air of a census tract. Our research objective is to test our hypothesis that there is a correlation between a census tract being majority non-white and having high levels of air pollutants present. We intend to model this using a graph that highlights census tracts with the highest levels of air pollutants overlaid with the percent composition of non-white residents to demonstrate possible inequalities. 
+
+## Proposed Methods: 
+In order to accomplish our proposed research objective we plan to utilize Social Vulnerability Index data provided by the CDC for Denver County, delineated by census tract. We will also use data from the EPA on Daily Census Tract-Level PM2.5 Concentrations for Denver County, which can directly be compared to the SVI data since they are both categorized by census tract. We plan on cleanup up the datasets, isolating the variables we wish to analyze, and then joining the two datasets together. We will be able to perform a linear regression to test whether or not SVI data is a valid predictor of PM2.5 Concentrations, thus determining if the variables are related. Additionally, we can use correlation tests such as the Shapiro-Wilks test, visualized through histograms and Q-Q plots, to analyze the distribution of the data. Through these methods of statistical analysis we should be able to identify whether or not the two variables are correlated and demonstrate a significant relationship with each other. 
+
+
+## Expected Outcomes: 
+Based on our research question, we expect there to be a correlation between racial demographics of a census tract and high pollution levels present, with non-white communities experiencing higher levels of recorded pollutants. This would be consistent with previous studies which found that minority communities are more likely to be exposed to higher than average levels of air pollution than white communities. Such an outcome is important in ensuring that all communities across Denver County, regardless of racial composition, have the right to clean air. Results that highlight a correlation between high levels of air pollution and non-white communities could be utilized in arguing for sustainable development of these census tracts and directing healthcare outreach. 
+
+# Proposal 4 - Caleb
+
+## Title: Change in RMNP Average Snowpack with Annual Temperatures
+
+## Justification: 
+The issue of climate change has caused regime alterations across aspects of ecosystems, impacting ecosystems functioning and environmental services we utilize. Especially in the Western US, we rely on snowpack that accumulates during the winter to provide water for the drier months of the year, which means that decreased snowpack results in scarcity. Globally, snowpack substantially contributes to the livelihoods of over a billion people, who are both directly and indirectly dependent on meltwater resources. (@irannezhad2022snowpack) Decreased annual snowpack can have adverse impacts on fire conditions, making wildfires that start more dangerous and difficult to control. Reduced meltwater, soil moisture, and fuel moisture can greatly increase fire potential in forest systems, which we have already begun to see across the West. (@Gergel2017-vr) These factors increase the need for snowpack monitoring, so urban populations are able to recognize when droughts are likely to occur and when fire risk is higher than average. 
+
+## Research objective/question/hypothesis: 
+In our project, we aim to visualize and compare the changing levels of snowpack recorded in one of the most popular national parks in the nation based on changing annual temperatures. Our hypothesis is that as annual temperatures in the alpine of Rocky Mountain National Park increase, the recorded snowpack at the six sites in the park will decrease over a 20 year period. We plan to model this using graphs that chart the trends in annual mean temperature, snow water equivalent and annual snow depth, as well as correlation charts to compare the variables.
+
+## Proposed Methods: 
+We will utilize SNOTEL data from the six sites located in Rocky Mountain National Park, pulling data on average snow water equivalent recorded, average snow depth, and annual mean temperatures by month. The six sites we plan to analyze located within RMNP are Phantom Valley, Lake Irene, Willow Park, Bear Lake, Copeland Lake, Wild Basin. Additionally, if we want to further expand on the topic of wildfire risk in relation to snowpack records we would pull data from Colorado State Forest Service to analyze wildfire risk around these sites. Before conducting statistical tests, we plan to model these variables visually through graphs which will help us draw initial conclusions on overall trends in the data. We plan to utilize multiple linear regression modelling to see if there is a relationship or impact on annual snowpack with the variables we want to analyze, as well as ANOVA testing to visualize variance between the variables that contribute to snowpack. 
+
+
+## Expected Outcomes: 
+In the results of our project, we expect there to be a significant correlation between average monthly air temperatures and annual mean snowpack, with higher temperatures resulting in lower recorded snowpack. This result would be consistent with other studies that have found that climate change is decreasing snowpack and glacier size across the world, impacting the water supply for millions. An outcome like this is important for monitoring seasonal fire conditions, preparing for water shortages, and reinforcing forest management and fire departments. Though we can’t slow down or stop the effects of climate change, knowing and being able to model the effects will help prepare communities for the impacts of depleted snowpack. 
